@@ -6,5 +6,4 @@ for x in range(10):
             if ((x * 10) + y) != 89:
                 print(", ", end="")
             else:
-                print("\n")
-                break
+                print("")
