@@ -1,19 +1,15 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    try:
-        key_list = list(a_dictionary)
-    except TypeError:
+    if a_dictionary is None:
         return None
 
-    if len(key_list) == 1:
-        biggest = key_list[0]
-    elif len(key_list) == 0:
-        return None
-    else:
-        for x in range(len(key_list) - 1):
-            next_key = key_list[x + 1]
-            curr_key = key_list[x]
-            if a_dictionary[curr_key] > a_dictionary[next_key]:
-                biggest = curr_key
+    key_list = list(a_dictionary)
+    biggest = 0
 
-    return biggest
+    for x in range(len(key_list)):
+        curr_key = key_list[x]
+        if a_dictionary[curr_key] > biggest:
+            biggest = a_dictionary[curr_key]
+            key = curr_key
+
+    return key
