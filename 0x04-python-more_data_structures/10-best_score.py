@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    try:
-        key_list = list(a_dictionary)
-    except TypeError:
-        return None
+    key_list = list(a_dictionary)
 
     for x in range(1, len(key_list)):
         prev_key = key_list[x - 1]
