@@ -4,6 +4,8 @@ def best_score(a_dictionary):
         return None
     biggest = 0
     for curr_key in a_dictionary.keys():
+        if a_dictionary[curr_key] is None:
+            return None
         if a_dictionary[curr_key] > biggest:
             biggest = a_dictionary[curr_key]
             key = curr_key
