@@ -1,5 +1,0 @@
-#!/usr/bin/python3
-def square_matrix_simple(matrix=[]):
-    new = [[x ** 2 for x in col]for col in matrix]
-    new = list(map(lambda x**2 : for col in matrix for x in col))
-    return new
