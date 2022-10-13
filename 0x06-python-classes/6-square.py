@@ -16,7 +16,8 @@ class Square:
 
         Args:
            size (int): the size of a square
-           position (tuple): the space to be left before printing size in my_print()
+           position (tuple): the space to be left before
+                             printing size in my_print()
 
         """
         if (type(size) != int):
@@ -24,8 +25,10 @@ class Square:
         if (size < 0):
             raise ValueError("size must be >= 0")
         self.__size = size
-        if (type(position) != tuple or not (len(position) == 2) and type(position[:]) == int):
-            raise TypeError("position must be a tuple of 2 positibe integers")
+        if (type(position) != tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if (not (len(position) == 2) and type(position[:]) == int):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
 
     def area(self):
@@ -74,6 +77,8 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if (type(position) != tuple or not (len(position) == 2) and type(position[:]) == int):
-            raise TypeError("position must be a tuple of 2 positibe integers")
+        if (type(position) != tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if (not (len(position) == 2) and type(position[:]) == int):
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
