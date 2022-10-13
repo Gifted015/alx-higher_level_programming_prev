@@ -31,7 +31,7 @@ class Square:
 
     @property
     def size(self):
-        """Returns the value of __size"""
+        """Retrieve the value of __size"""
 
         return self.__size
 
@@ -46,6 +46,8 @@ class Square:
         self.__size = value
 
     def my_print(self):
+        """Prints in stdout the square with the character #"""
+
         for y in range(self.__size):
             for x in range(self.__size):
                 print("#", end="")
