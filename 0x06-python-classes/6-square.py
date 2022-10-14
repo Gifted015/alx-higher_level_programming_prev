@@ -57,21 +57,22 @@ class Square:
     def my_print(self):
         """Prints in stdout the square with the character #"""
 
-        rang = self.__size
-        horiz = self.position[0]
-        vert = self.position[1]
-        for y in range(vert + rang):
-            if (y < vert):
-                print("")
-                continue
-            for x in range(horiz + rang):
-                if (x < horiz):
-                    print(" ", end="")
-                else:
-                    print("#", end="")
-            print("")
         if (self.__size == 0):
             print("")
+        else:
+            rang = self.__size
+            horiz = self.position[0]
+            vert = self.position[1]
+            for y in range(vert + rang):
+                if (y < vert):
+                    print("")
+                    continue
+                for x in range(horiz + rang):
+                    if (x < horiz):
+                        print(" ", end="")
+                    else:
+                        print("#", end="")
+                print("")
 
     @property
     def position(self):
