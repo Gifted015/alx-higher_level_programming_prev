@@ -61,7 +61,7 @@ class Rectangle:
 
     def __str__(self):
         if (self.__width == 0 or self.__height == 0):
-            return("")
+            return ("")
         else:
             cont = ""
             for h in range(self.__height):
